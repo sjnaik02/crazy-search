@@ -1,15 +1,16 @@
 <script>
-  
+
 </script>
 
-<div class="search-box">
-
-</div>
+<input class="search-box"/>
 
 <style>
-  .search-box{
+  input{
     border: 1px solid #000;
     padding: 10px;
-    margin: 10px;
+    width: clamp(300px, 50vw, 500px);
+  }
+  input:focus{
+    outline: none;
   }
 </style>
