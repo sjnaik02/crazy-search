@@ -6,7 +6,7 @@
 <main>
   <h1>Crazy Search!</h1>
   <SearchBar />
-  <p class="text"><a target="_blank" href="https://icons8.com/icon/30453/google-sheets">Google Sheets</a> && <a target="_blank" href="https://icons8.com/icon/100417/google-docs">Google Docs</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></p>
+  <p class="text"><a target="_blank" href="https://icons8.com/icon/30453/google-sheets">Google Sheets</a> && <a target="_blank" href="https://icons8.com/icon/100417/google-docs">Google Docs</a> icons by <a target="_blank" href="https://icons8.com">Icons8</a></p>
 </main>
 </div>
 
@@ -18,7 +18,7 @@
   .wrapper{
     box-sizing: border-box;
     font-size: 16px;
-    font-family: sans-serif;
+    font-family: monospace;
     line-height: 1.5;
     margin: 0;
     padding: 0;

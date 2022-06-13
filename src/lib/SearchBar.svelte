@@ -70,7 +70,7 @@
     padding: 5px;
     width: 45px;
     height: 45px;
-    margin: 40px;
+    margin: 30px;
     box-shadow:  12px 12px 24px #d8d8d8,
                 -12px -12px 24px #ffffff;
   }
@@ -93,14 +93,14 @@
     font-family: monospace;
   }
   input:focus{
-    box-shadow: inset 12px 12px 20px #e6e6e6,
+    box-shadow: inset 8px 8px 6px #e6e6e6,
                 inset -12px -12px 30px #ffffff;
     outline: none;
   }
   button{
     height: 60px;
     width: 60px;
-    margin: 40px;
+    margin: 30px;
     padding: 10px;
     border-radius: 100%;
     background-color: #fff;
