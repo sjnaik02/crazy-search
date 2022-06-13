@@ -4,7 +4,7 @@
 
 <div class="wrapper">
 <main>
-  <h1>Crazy Search</h1>
+  <h1>Crazy Search!</h1>
   <SearchBar />
 </main>
 </div>
@@ -17,7 +17,7 @@
     line-height: 1.5;
     margin: 0;
     padding: 0;
-    background-color: #2d2d2d;
+    background-color: #15133C;
     color: #fff;
 
   }
