@@ -11,6 +11,10 @@
 </div>
 
 <style>
+  h1{
+    font-size: 64px;
+    font-family: 'Roboto Mono', monospace;
+  }
   .wrapper{
     box-sizing: border-box;
     font-size: 16px;

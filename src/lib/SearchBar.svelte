@@ -71,40 +71,45 @@
     width: 45px;
     height: 45px;
     margin: 40px;
-    box-shadow:  12px 12px 24px #d9d9d9,
+    box-shadow:  12px 12px 24px #d8d8d8,
                 -12px -12px 24px #ffffff;
   }
   span{
     height: 1rem;
+    font-family: monospace;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-size: 1.2rem;
   }
   input{
     border: 1px solid black;
     padding: 20px;
     font-size: 1.2rem;
-    width : clamp(300px, 35vw, 600px);
+    width : clamp(250px, 40vw, 600px);
     border-radius: 50px;
     background-color: #fff;
     box-shadow:  25px 25px 50px #d9d9d9,
                 -25px -25px 50px #ffffff;
+    font-family: monospace;
   }
   input:focus{
-    box-shadow: inset 12px 12px 24px #d9d9d9,
-                inset -12px -12px 24px #ffffff;
+    box-shadow: inset 12px 12px 20px #e6e6e6,
+                inset -12px -12px 30px #ffffff;
     outline: none;
   }
   button{
-    height: 50px;
-    width: 50px;
+    height: 60px;
+    width: 60px;
     margin: 40px;
     padding: 10px;
-    border-radius: 25px;
+    border-radius: 100%;
     background-color: #fff;
     font-size: 1.3rem;
-    box-shadow:  12px 12px 24px #d9d9d9,
+    box-shadow:  12px 12px 24px #d8d8d8,
                 -12px -12px 24px #ffffff;
   }
   button:active{
-    box-shadow: inset 12px 12px 24px #d9d9d9,
+    box-shadow: inset 12px 12px 24px #d8d8d8,
                 inset -12px -12px 24px #ffffff;
     outline: none;
   }
