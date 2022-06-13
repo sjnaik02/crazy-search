@@ -2,7 +2,6 @@
   let search = "";
   let defaultSearchEngine = "google";
   let searchEngine = "";
-  //google, youtube, github, drive, docs and sheets
   const engines = ["YouTube", "Docs", "Drive", "Sheets", "GitHub", "Google"];
 
   const searchEngines = {
