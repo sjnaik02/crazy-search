@@ -4,7 +4,7 @@
 
 <div class="wrapper">
 <main>
-  <h1>Hello World</h1>
+  <h1>Crazy Search</h1>
   <SearchBar />
 </main>
 </div>
@@ -17,8 +17,8 @@
     line-height: 1.5;
     margin: 0;
     padding: 0;
-    color: #333;
-    background-color: #fff;
+    background-color: #2d2d2d;
+    color: #fff;
 
   }
   main{

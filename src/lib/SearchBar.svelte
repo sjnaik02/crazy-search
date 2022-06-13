@@ -1,16 +1,39 @@
 <script>
+  let search = "";
+  let defaultSearchEngine = "google";
+  //google, youtube, github, drive, docs and sheets
+  const array = ["YouTube", "Drive", "google"];
 
+  const autocomplete = (search) => {
+    let autocomplete = '';
+    let firstWord = search.split(' ')[0];
+    array.forEach(element => {
+      if (element.substring(0, firstWord.length>0?firstWord.length:1).toUpperCase() === firstWord.toUpperCase()) {
+        autocomplete = element;
+      }
+    });
+
+    return autocomplete;
+  };  
+
+  $:if(autocomplete(search)) {
+    console.log(autocomplete(search));
+  }
 </script>
 
-<input class="search-box"/>
+<input bind:value={search}>
+<span>
+{#if autocomplete(search)}
+   Press Tab to search with {autocomplete(search)}
+{/if}
+</span>
 
 <style>
-  input{
-    border: 1px solid #000;
-    padding: 10px;
-    width: clamp(300px, 50vw, 500px);
+  span{
+    height: 2rem;
   }
-  input:focus{
-    outline: none;
+  input{
+    padding: 10px;
+    width : clamp(300px, 30vw, 600px);
   }
 </style>
