@@ -17,7 +17,7 @@
     line-height: 1.5;
     margin: 0;
     padding: 0;
-    background-color: #15133C;
+    background-color: #000;
     color: #fff;
 
   }
