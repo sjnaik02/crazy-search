@@ -52,9 +52,9 @@
 
 
 <div class="wrapper">
-  <img src={`src/static/${searchEngine ? searchEngine : defaultSearchEngine}.svg`} alt="search term icon" class="icon">
+  <img src={`/${searchEngine ? searchEngine : defaultSearchEngine}.svg`} alt="search term icon" class="icon">
   <input bind:value={search} on:keydown={handleKeyDown}>
-  <button on:click={handleClick}><img src="src/static/angles-right.svg" alt="Right arrows"></button>
+  <button on:click={handleClick}><img src="/angles-right.svg" alt="Right arrows"></button>
 </div>
 <span>
 {#if autocomplete(search)&&searchEngine === ""}
