@@ -6,6 +6,7 @@
 <main>
   <h1>Crazy Search!</h1>
   <SearchBar />
+  <p class="text"><a target="_blank" href="https://icons8.com/icon/30453/google-sheets">Google Sheets</a> && <a target="_blank" href="https://icons8.com/icon/100417/google-docs">Google Docs</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></p>
 </main>
 </div>
 
@@ -17,8 +18,8 @@
     line-height: 1.5;
     margin: 0;
     padding: 0;
-    background-color: #000;
-    color: #fff;
+    background-color: #fff;
+    color: #000;
 
   }
   main{
@@ -28,5 +29,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  .text{
+    font-family: monospace;
+    color: #999;
+    margin-bottom: 50px;
+  }
+  .text a{
+    color: #000;
   }
 </style>

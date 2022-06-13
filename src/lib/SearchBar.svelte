@@ -3,7 +3,7 @@
   let defaultSearchEngine = "google";
   let searchEngine = "";
   //google, youtube, github, drive, docs and sheets
-  const engines = ["YouTube", "Drive", "Google", "Docs", "Sheets", "GitHub"];
+  const engines = ["YouTube", "Docs", "Drive", "Sheets", "GitHub", "Google"];
 
   const searchEngines = {
     Google : "https://www.google.com/search?q=",
@@ -51,32 +51,66 @@
 
 </script>
 
-<input bind:value={search} on:keydown={handleKeyDown}>
-<button on:click={handleClick}>Search!</button>
+
+<div class="wrapper">
+  <img src={`src/assets/${searchEngine ? searchEngine : defaultSearchEngine}.svg`} alt="search term icon" class="icon">
+  <input bind:value={search} on:keydown={handleKeyDown}>
+  <button on:click={handleClick}><img src="src/assets/angles-right.svg" alt="Right arrows"></button>
+</div>
 <span>
 {#if autocomplete(search)&&searchEngine === ""}
    Press right arrow to search with {autocomplete(search)}
 {/if}
-<p>{searchEngine}</p>
 </span>
-
+  
 <style>
+  .icon{
+    border: 1px solid #000;
+    border-radius: 50%;
+    padding: 5px;
+    width: 45px;
+    height: 45px;
+    margin: 40px;
+    box-shadow:  12px 12px 24px #d9d9d9,
+                -12px -12px 24px #ffffff;
+  }
   span{
     height: 1rem;
   }
   input{
-    padding: 10px;
-    font-size: 1.5rem;
-    width : clamp(300px, 40vw, 600px);
+    border: 1px solid black;
+    padding: 20px;
+    font-size: 1.2rem;
+    width : clamp(300px, 35vw, 600px);
     border-radius: 50px;
-    background-color: #cacaca;
+    background-color: #fff;
+    box-shadow:  25px 25px 50px #d9d9d9,
+                -25px -25px 50px #ffffff;
+  }
+  input:focus{
+    box-shadow: inset 12px 12px 24px #d9d9d9,
+                inset -12px -12px 24px #ffffff;
+    outline: none;
   }
   button{
-    margin: 20px;
+    height: 50px;
+    width: 50px;
+    margin: 40px;
     padding: 10px;
-    border-radius: 10px;
-    background-color: #cacaca;
+    border-radius: 25px;
+    background-color: #fff;
     font-size: 1.3rem;
-    width: 10rem;
+    box-shadow:  12px 12px 24px #d9d9d9,
+                -12px -12px 24px #ffffff;
+  }
+  button:active{
+    box-shadow: inset 12px 12px 24px #d9d9d9,
+                inset -12px -12px 24px #ffffff;
+    outline: none;
+  }
+  .wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 </style>
