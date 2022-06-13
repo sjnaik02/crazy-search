@@ -24,13 +24,18 @@
     });
     return autocomplete;
   };  
+
+  const removeMessageFromSearch = (s) => {
+    return s.substring(s.indexOf('|')+1, s.length);
+  }
   
   const handleKeyDown = (e) => {
     if(autocomplete(search) !== "" && e.key === "ArrowRight"){
       searchEngine = autocomplete(search);
-      search = "";
-    } else if (search === "" && e.key === "Backspace"){
+      search = `Search ${searchEngine} | `;
+    } else if ((search === "" || removeMessageFromSearch(search) == " ")&& e.key === "Backspace"){
       searchEngine = "";
+      search = "";
     } else if (e.key === "Enter"){
       handleClick();
     }
@@ -40,7 +45,7 @@
     if(searchEngine === ""){
       window.open(`https://${defaultSearchEngine}.com/search?q=${search}`, '_blank');
     } else {
-      window.open(`${searchEngines[searchEngine]}${search}`, '_blank');
+      window.open(`${searchEngines[searchEngine]}${removeMessageFromSearch(search)}`, '_blank');
     }
   };
 
