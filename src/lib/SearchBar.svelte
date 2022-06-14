@@ -4,6 +4,15 @@
   let searchEngine = "";
   const engines = ["YouTube", "Docs", "Drive", "Sheets", "GitHub", "Google"];
 
+  const logos = {
+    Google: "https://res.cloudinary.com/sjnaik02/image/upload/v1655181766/google_jzdt2s.svg",
+    YouTube: "https://res.cloudinary.com/sjnaik02/image/upload/v1655181765/youtube_jepivz.svg",
+    GitHub: "https://res.cloudinary.com/sjnaik02/image/upload/v1655181763/github_a0kybm.svg",
+    Drive: "https://res.cloudinary.com/sjnaik02/image/upload/v1655181764/drive_q4tgah.svg",
+    Docs: "https://res.cloudinary.com/sjnaik02/image/upload/v1655181768/docs_xitm7g.svg",
+    Sheets: "https://res.cloudinary.com/sjnaik02/image/upload/v1655181768/sheets_q7rdrm.svg",
+  }
+
   const searchEngines = {
     Google : "https://www.google.com/search?q=",
     YouTube: "https://www.youtube.com/results?search_query=",
@@ -52,7 +61,7 @@
 
 
 <div class="wrapper">
-  <img src={`/${searchEngine ? searchEngine : defaultSearchEngine}.svg`} alt="search term icon" class="icon">
+  <img src={ searchEngine ? logos[searchEngine] : logos["Google"] } alt="search term icon" class="icon">
   <input bind:value={search} on:keydown={handleKeyDown}>
   <button on:click={handleClick}><img src="/angles-right.svg" alt="Right arrows"></button>
 </div>
